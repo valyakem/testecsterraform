@@ -1,3 +1,5 @@
+# alb.tf
+
 resource "aws_alb" "main" {
   name            = "cb-load-balancer"
   subnets         = aws_subnet.public.*.id
@@ -33,3 +35,4 @@ resource "aws_alb_listener" "front_end" {
     type             = "forward"
   }
 }
+

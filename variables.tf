@@ -1,16 +1,13 @@
+# variables.tf
+
 variable "aws_region" {
   description = "The AWS region things are created in"
-  default     = "us-east-1"
+  default     = "us-west-2"
 }
 
 variable "ecs_task_execution_role_name" {
   description = "ECS task execution role name"
   default = "myEcsTaskExecutionRole"
-}
-
-variable "ecs_auto_scale_role_name" {
-  description = "ECS auto scale role Name"
-  default = "myEcsAutoScaleRole"
 }
 
 variable "az_count" {
@@ -46,3 +43,4 @@ variable "fargate_memory" {
   description = "Fargate instance memory to provision (in MiB)"
   default     = "2048"
 }
+

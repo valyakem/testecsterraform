@@ -1,3 +1,5 @@
+# security.tf
+
 # ALB Security Group: Edit to restrict access to the application
 resource "aws_security_group" "lb" {
   name        = "cb-load-balancer-security-group"
@@ -39,3 +41,4 @@ resource "aws_security_group" "ecs_tasks" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
